@@ -34,9 +34,9 @@ export const Table = ({ objects, neighborhoods }) => {
           <tbody id="objectsTableBody" className="text-center">
             {neighborhoods?.items?.map((ng) => (
               <tr>
-                <td className="p-0! h-40">
+                <td className="p-0! h-40 w-10!">
                   <div className="flex items-center h-full! justify-between">
-                    <span className="p-3! pr-0!">{ng.__EMPTY_3}</span>
+                    <span className="p-1! md:p-3! pr-0!">{ng.__EMPTY_3}</span>
                     <div className="h-full! border border-color border-b-0! flex flex-col items-center justify-center gap-y-5">
                       <div className="px-4! pt-4! flex-1!">Жами</div>
                       <div className="border-b border-color w-full" />
