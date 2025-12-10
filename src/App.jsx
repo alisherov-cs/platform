@@ -39,9 +39,9 @@ function App() {
   const [neighborhoods, setNeighborhoods] = useState([]);
   const [active, setActive] = useState(1);
   const [neighborhoodsCount, setNeighborhoodsCount] = useState(0);
-  const [usersCount, setUsersCount] = useState(0);
-  const [householdCount, setHouseholdCount] = useState(0);
-  const [underGuard, setUnderGuard] = useState(0);
+  const [usersCount, setUsersCount] = useState({});
+  const [householdCount, setHouseholdCount] = useState({});
+  const [underGuard, setUnderGuard] = useState({});
 
   const usersByDistrict = useMemo(() => {
     return neighborhoods
@@ -100,12 +100,26 @@ function App() {
         const jsonDataStats = XLSX.utils.sheet_to_json(worksheetStats);
 
         console.log({ jsonDataStats });
-        setNeighborhoodsCount(
-          jsonDataStats[jsonDataStats.length - 1].__EMPTY_2
-        );
-        setUsersCount(jsonDataStats[jsonDataStats.length - 1].__EMPTY_3);
-        setHouseholdCount(jsonDataStats[jsonDataStats.length - 1].__EMPTY_4);
-        setUnderGuard(jsonDataStats[jsonDataStats.length - 1].__EMPTY_6);
+        setNeighborhoodsCount({
+          // total: jsonDataStats[jsonDataStats.length - 1].__EMPTY_2,
+          total: formatNumber(532),
+          underGuard: formatNumber(438),
+        });
+        setUsersCount({
+          // total: jsonDataStats[jsonDataStats.length - 1].__EMPTY_3,
+          total: formatNumber(42757),
+          underGuard: formatNumber(35108),
+        });
+        setHouseholdCount({
+          // total: jsonDataStats[jsonDataStats.length - 1].__EMPTY_4,
+          total: formatNumber(27160),
+          underGuard: formatNumber(19923),
+        });
+        setUnderGuard({
+          // total: jsonDataStats[jsonDataStats.length - 1].__EMPTY_6,
+          total: formatNumber(61102),
+          underGuard: formatNumber(51930),
+        });
       })
       .catch((err) => console.error("Error reading file:", err));
   }, []);
@@ -115,10 +129,10 @@ function App() {
       <Header />
       <div className="container">
         <Stats
-          neighborhoods={formatNumber(neighborhoodsCount)}
-          users={formatNumber(usersCount)}
-          households={formatNumber(householdCount)}
-          underGuard={formatNumber(underGuard)}
+          neighborhoods={neighborhoodsCount}
+          users={usersCount}
+          households={householdCount}
+          underGuard={underGuard}
         />
         <div className="main-layout">
           <Sidebar
