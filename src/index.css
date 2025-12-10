@@ -24,6 +24,7 @@
   --text-muted: #64748b;
 
   --success: #10b981;
+  --info: #6376e5;
   --warning: #f59e0b;
   --danger: #ef4444;
 
@@ -359,6 +360,10 @@ body::before {
 
 .stat-card:nth-child(3) .stat-value {
   color: var(--success);
+}
+
+.stat-card:nth-child(4) .stat-value {
+  color: var(--info);
 }
 
 /* Layout */

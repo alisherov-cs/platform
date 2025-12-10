@@ -1,4 +1,4 @@
-export const Stats = ({ neighborhoods, users, households }) => {
+export const Stats = ({ neighborhoods, users, households, underGuard }) => {
   return (
     <div className="stats-grid">
       <div className="stat-card">
@@ -17,6 +17,12 @@ export const Stats = ({ neighborhoods, users, households }) => {
         <div className="stat-label">Jami Xonadon</div>
         <div className="stat-value" id="statHouseholds">
           {households}
+        </div>
+      </div>
+      <div className="stat-card">
+        <div className="stat-label">Jami Qo'riqda</div>
+        <div className="stat-value" id="statUnderGuard">
+          {underGuard}
         </div>
       </div>
     </div>

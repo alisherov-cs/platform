@@ -41,6 +41,7 @@ function App() {
   const [neighborhoodsCount, setNeighborhoodsCount] = useState(0);
   const [usersCount, setUsersCount] = useState(0);
   const [householdCount, setHouseholdCount] = useState(0);
+  const [underGuard, setUnderGuard] = useState(0);
 
   const usersByDistrict = useMemo(() => {
     return neighborhoods
@@ -104,6 +105,7 @@ function App() {
         );
         setUsersCount(jsonDataStats[jsonDataStats.length - 1].__EMPTY_3);
         setHouseholdCount(jsonDataStats[jsonDataStats.length - 1].__EMPTY_4);
+        setUnderGuard(jsonDataStats[jsonDataStats.length - 1].__EMPTY_6);
       })
       .catch((err) => console.error("Error reading file:", err));
   }, []);
@@ -116,6 +118,7 @@ function App() {
           neighborhoods={formatNumber(neighborhoodsCount)}
           users={formatNumber(usersCount)}
           households={formatNumber(householdCount)}
+          underGuard={formatNumber(underGuard)}
         />
         <div className="main-layout">
           <Sidebar
