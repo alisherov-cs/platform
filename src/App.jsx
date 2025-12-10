@@ -42,6 +42,8 @@ function App() {
   const [usersCount, setUsersCount] = useState({});
   const [householdCount, setHouseholdCount] = useState({});
   const [underGuard, setUnderGuard] = useState({});
+  const [buildingHouseholds, setBuildingHouseholds] = useState({});
+  const [houses, setHouses] = useState({});
 
   const usersByDistrict = useMemo(() => {
     return neighborhoods
@@ -112,13 +114,23 @@ function App() {
         });
         setHouseholdCount({
           // total: jsonDataStats[jsonDataStats.length - 1].__EMPTY_4,
-          total: formatNumber(27160),
-          underGuard: formatNumber(19923),
+          total: formatNumber(499),
+          underGuard: formatNumber(281),
         });
         setUnderGuard({
           // total: jsonDataStats[jsonDataStats.length - 1].__EMPTY_6,
-          total: formatNumber(61102),
-          underGuard: formatNumber(51930),
+          total: formatNumber(42757),
+          underGuard: formatNumber(18503),
+        });
+        setBuildingHouseholds({
+          // total: jsonDataStats[jsonDataStats.length - 1].__EMPTY_4,
+          total: formatNumber(56),
+          underGuard: formatNumber(27),
+        });
+        setHouses({
+          // total: jsonDataStats[jsonDataStats.length - 1].__EMPTY_4,
+          total: formatNumber(17948),
+          underGuard: formatNumber(6143),
         });
       })
       .catch((err) => console.error("Error reading file:", err));
@@ -133,6 +145,8 @@ function App() {
           users={usersCount}
           households={householdCount}
           underGuard={underGuard}
+          buildingHouseholds={buildingHouseholds}
+          houses={houses}
         />
         <div className="main-layout">
           <Sidebar
