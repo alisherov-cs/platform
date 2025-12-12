@@ -2,47 +2,60 @@ import {
   MapContainer,
   TileLayer,
   Marker,
-  Popup,
-  CircleMarker,
+  Polygon,
+  Tooltip,
 } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
+import neighborhoods from "../data/neighborhoods.json";
 import L from "leaflet";
+import ReactDOMServer from "react-dom/server";
+
+import { useEffect } from "react";
+
+// const createCircularCountIcon = (userCount, color = "#1E88E5") => {
+//   const html = ReactDOMServer.renderToString(
+//     <div
+//       className="flex items-center justify-center rounded-full border-2 border-white shadow-lg"
+//       style={{
+//         backgroundColor: color,
+//         width: "44px",
+//         height: "44px",
+//       }}
+//     >
+//       <span className="text-white font-bold text-base">{userCount}</span>
+//     </div>
+//   );
+
+//   return L.divIcon({
+//     html,
+//     className: "simple-circle-count",
+//     iconSize: [44, 44],
+//     iconAnchor: [22, 22],
+//   });
+// };
+
+const addHoverEffect = (e) => {
+  e.target.setStyle({
+    weight: 4,
+    color: "#05f",
+    fillOpacity: 0,
+  });
+  e.target.bringToFront();
+};
+
+const removeHoverEffect = (e, color) => {
+  e.target.setStyle({
+    weight: 2,
+    color,
+    fillOpacity: 0.2,
+  });
+  e.target.bringToBack();
+};
 
 function Map() {
-  // Sample data for markers
-  const locations = [
-    {
-      id: 1,
-      name: "Maktab 1",
-      type: "Maktab",
-      position: [41.55, 60.63],
-      population: 32,
-      houses: 10,
-      mahalla: "Amir Temur MFY",
-      color: "#8B5CF6",
-    },
-    {
-      id: 2,
-      name: "Maktab 2",
-      type: "Maktab",
-      position: [41.57, 60.65],
-      population: 45,
-      houses: 15,
-      mahalla: "Yangi mahalla",
-      color: "#3B82F6",
-    },
-    {
-      id: 3,
-      name: "Bog'cha 1",
-      type: "Bog'cha",
-      position: [41.53, 60.61],
-      population: 28,
-      houses: 8,
-      mahalla: "Markaziy MFY",
-      color: "#10B981",
-    },
-    // Add more locations...
-  ];
+  useEffect(() => {
+    console.log({ neighborhoods });
+  }, []);
 
   // Create custom icon function
 
@@ -64,8 +77,8 @@ function Map() {
 
       <div className="map-container">
         <MapContainer
-          center={[41.55, 60.63]}
-          zoom={12}
+          center={[41.5567841574877, 60.617264968262404]}
+          zoom={13}
           style={{
             height: "600px",
             borderRadius: "12px",
@@ -77,38 +90,25 @@ function Map() {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
 
-          {locations.map((location) => (
-            <CircleMarker
-              iconSize={10}
-              key={location.id}
-              center={location.position}
-              radius={10}
-              fillColor={location.color}
-              color={location.color}
-              weight={2}
-              opacity={0.8}
-              fillOpacity={0.6}
+          {neighborhoods.data.map((neighborhood) => (
+            <Polygon
+              key={neighborhood.id}
+              positions={neighborhood.coords}
+              pathOptions={{
+                color: neighborhood.color,
+              }}
+              eventHandlers={{
+                mouseover: addHoverEffect,
+                mouseout: (e) => removeHoverEffect(e, neighborhood.color),
+              }}
             >
-              <Popup>
-                <div style={{ minWidth: "150px" }}>
-                  <h3 style={{ margin: "0 0 10px 0", fontSize: "16px" }}>
-                    {location.name}
-                  </h3>
-                  <p style={{ margin: "5px 0", fontSize: "14px" }}>
-                    <strong>Tur:</strong> {location.type}
-                  </p>
-                  <p style={{ margin: "5px 0", fontSize: "14px" }}>
-                    <strong>Aholi:</strong> {location.population}
-                  </p>
-                  <p style={{ margin: "5px 0", fontSize: "14px" }}>
-                    <strong>Xonadon:</strong> {location.houses}
-                  </p>
-                  <p style={{ margin: "5px 0", fontSize: "14px" }}>
-                    <strong>Mahalla:</strong> {location.mahalla}
-                  </p>
-                </div>
-              </Popup>
-            </CircleMarker>
+              <Tooltip sticky>{neighborhood.uz.name} MFY</Tooltip>
+
+              {/* <Marker
+                position={L.latLngBounds(neighborhood.coords).getCenter()}
+                icon={createCircularCountIcon(neighborhood.household_count)}
+              /> */}
+            </Polygon>
           ))}
         </MapContainer>
       </div>
