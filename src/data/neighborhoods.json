@@ -388,7 +388,7 @@
         ]
       ],
       "id": 2,
-      "color": "#ab0202",
+      "color": "#1e6106",
       "uz": {
         "id": 3,
         "name": "Gulshan"
@@ -470,7 +470,7 @@
         ]
       ],
       "id": 3,
-      "color": "#ab0202",
+      "color": "#ff0000",
       "uz": {
         "id": 5,
         "name": "Gulzor"
@@ -535,7 +535,7 @@
         ]
       ],
       "id": 4,
-      "color": "#ffb70f",
+      "color": "#1e6106",
       "uz": {
         "id": 7,
         "name": "Yangi hayot"
@@ -1216,7 +1216,7 @@
         ]
       ],
       "id": 15,
-      "color": "#135200",
+      "color": "#1e6106",
       "uz": {
         "id": 29,
         "name": "Gulchilar"
@@ -1633,7 +1633,7 @@
         ]
       ],
       "id": 17,
-      "color": "#ab0202",
+      "color": "#1e6106",
       "uz": {
         "id": 33,
         "name": "Olma bog'"
@@ -2038,7 +2038,7 @@
         ]
       ],
       "id": 19,
-      "color": "#ffb70f",
+      "color": "#1e6106",
       "uz": {
         "id": 37,
         "name": "Yangi o'zbekiston"
@@ -2461,7 +2461,7 @@
         ]
       ],
       "id": 8,
-      "color": "#ab0202",
+      "color": "#ff0000",
       "uz": {
         "id": 15,
         "name": "Jambul"
@@ -4024,7 +4024,7 @@
         ]
       ],
       "id": 21,
-      "color": "#ab0202",
+      "color": "#1e6106",
       "uz": {
         "id": 41,
         "name": "Feruz"
@@ -4367,7 +4367,7 @@
         ]
       ],
       "id": 22,
-      "color": "#ab0202",
+      "color": "#ff0000",
       "uz": {
         "id": 43,
         "name": "Al-xorazmiy"
@@ -4433,7 +4433,7 @@
         ]
       ],
       "id": 23,
-      "color": "#ab0202",
+      "color": "#1e6106",
       "uz": {
         "id": 45,
         "name": "Besh mergan"
@@ -6309,7 +6309,7 @@
         ]
       ],
       "id": 32,
-      "color": "#ab0202",
+      "color": "#1e6106",
       "uz": {
         "id": 63,
         "name": "Kamolot"
@@ -6708,7 +6708,7 @@
         ]
       ],
       "id": 34,
-      "color": "#ab0202",
+      "color": "#ffb70f",
       "uz": {
         "id": 67,
         "name": "Ma'rifat"
@@ -7048,7 +7048,7 @@
         ]
       ],
       "id": 35,
-      "color": "#ab0202",
+      "color": "#1e6106",
       "uz": {
         "id": 69,
         "name": "Navro'z"
