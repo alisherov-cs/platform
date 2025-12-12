@@ -1172,7 +1172,7 @@
         ]
       ],
       "id": 7,
-      "color": "#1e6106",
+      "color": "#ffb70f",
       "uz": {
         "id": 13,
         "name": "Obi-hayot"
@@ -1377,7 +1377,7 @@
         ]
       ],
       "id": 10,
-      "color": "#1e6106",
+      "color": "#ffb70f",
       "uz": {
         "id": 19,
         "name": "Istiqlol"
@@ -1420,7 +1420,7 @@
         ]
       ],
       "id": 11,
-      "color": "#1e6106",
+      "color": "#ffb70f",
       "uz": {
         "id": 21,
         "name": "Do'stlik"
@@ -1464,7 +1464,7 @@
         ]
       ],
       "id": 12,
-      "color": "#1e6106",
+      "color": "#ffb70f",
       "uz": {
         "id": 23,
         "name": "Umid"
@@ -1505,7 +1505,7 @@
         ]
       ],
       "id": 13,
-      "color": "#389e0d",
+      "color": "#ffb70f",
       "uz": {
         "id": 25,
         "name": "Toza bog'"
@@ -1559,7 +1559,7 @@
         ]
       ],
       "id": 14,
-      "color": "#ffa940",
+      "color": "#ffb70f",
       "uz": {
         "id": 27,
         "name": "Bo'ston"
@@ -1598,7 +1598,7 @@
         ]
       ],
       "id": 16,
-      "color": "#ab0202",
+      "color": "#ffb70f",
       "uz": {
         "id": 31,
         "name": "Jaloladdin manguberdi"
@@ -1633,7 +1633,7 @@
         ]
       ],
       "id": 17,
-      "color": "#ff7875",
+      "color": "#ab0202",
       "uz": {
         "id": 33,
         "name": "Olma bog'"
@@ -2136,7 +2136,7 @@
         ]
       ],
       "id": 20,
-      "color": "#ab0202",
+      "color": "#ffb70f",
       "uz": {
         "id": 39,
         "name": "Navbahor"
@@ -2860,7 +2860,7 @@
         ]
       ],
       "id": 39,
-      "color": "#1e6106",
+      "color": "#ffb70f",
       "uz": {
         "id": 77,
         "name": "Bobur"
@@ -3793,7 +3793,7 @@
         ]
       ],
       "id": 37,
-      "color": "#ab0202",
+      "color": "#ffb70f",
       "uz": {
         "id": 73,
         "name": "Temir yo'lchi"
@@ -3907,7 +3907,7 @@
         ]
       ],
       "id": 28,
-      "color": "#ab0202",
+      "color": "#ffb70f",
       "uz": {
         "id": 55,
         "name": "Jingavuz"
@@ -4367,7 +4367,7 @@
         ]
       ],
       "id": 22,
-      "color": "#1e6106",
+      "color": "#ab0202",
       "uz": {
         "id": 43,
         "name": "Al-xorazmiy"
@@ -5367,7 +5367,7 @@
         ]
       ],
       "id": 27,
-      "color": "#ab0202",
+      "color": "#ffb70f",
       "uz": {
         "id": 53,
         "name": "Mash'al"
@@ -5650,7 +5650,7 @@
         ]
       ],
       "id": 29,
-      "color": "#1e6106",
+      "color": "#ffb70f",
       "uz": {
         "id": 57,
         "name": "Baynalminalchi"
